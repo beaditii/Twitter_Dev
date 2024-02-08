@@ -40,7 +40,9 @@ app.listen(3000, async() => {
 //  await tweet.save();
 //    console.log(tweet);
  
-const tweet=await tweetRepo.getWithComment('65c3d9e998c6a17325e2c074');
-    console.log(tweet);
-
+// const tweet=await tweetRepo.getAll(0,4);
+//     console.log(tweet[0].contentWithEmail);
+     
+const tweet=await tweetRepo.create({content:'with hooks now'});
+console.log(tweet);
 });
