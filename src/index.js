@@ -1,20 +1,42 @@
-const express = require('express');
-const connect=require('./config/database');
+import express from 'express';
+import {connect} from './config/database.js';
 const app = express();
 
- const TweetService=require('./services/tweet-service');
+ import TweetService from './services/tweet-service.js';
+
 app.listen(3000, async() => {
     console.log('server started');
     await connect();
 
     console.log('Mongo db connected');
-   //  let service=new TweetService();
-   //  const tweet=service.create({
-   //    content:'I am #excited and going to do #fun, #newjob'
-   //  });
-   //  console.log(tweet);
+    let service=new TweetService();
+
+    await service.create({content:"Done with #refractor?"});
+   
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,3 +98,8 @@ app.listen(3000, async() => {
 
 // const tweet=await tweetRepo.create({content:'with hooks now'});
 // console.log(tweet);
+//  let service=new TweetService();
+   //  const tweet=service.create({
+   //    content:'I am #excited and going to do #fun, #newjob'
+   //  });
+   //  console.log(tweet);

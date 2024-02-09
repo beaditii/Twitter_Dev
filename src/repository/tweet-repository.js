@@ -1,4 +1,4 @@
-const Tweet=require('../models/tweet');
+import Tweet from '../models/tweet.js';
 
 
 class TweetRepository{
@@ -64,5 +64,4 @@ async getAll(offset,limit){
        }
 }
 }
-
-module.exports=TweetRepository;
+export default TweetRepository;

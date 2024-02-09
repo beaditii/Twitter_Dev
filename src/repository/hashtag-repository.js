@@ -1,4 +1,4 @@
-const Hashtag=require('../models/hashtags');
+import Hashtag from '../models/hashtags.js';
 
 
 class HashtagRepository{
@@ -61,4 +61,4 @@ async findByname(titleList){
 
 }
 
-module.exports=HashtagRepository;
+export default HashtagRepository;
