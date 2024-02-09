@@ -11,7 +11,7 @@ app.listen(3000, async() => {
     console.log('Mongo db connected');
     let service=new TweetService();
 
-    await service.create({content:"Done with #refractor?"});
+    await service.create({content:"#reMovEd tweet Schema"});
    
 
 });
