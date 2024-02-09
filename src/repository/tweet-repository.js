@@ -32,16 +32,16 @@ async getWithComment(id){
            console.log(error);
        }
 }
-async update(tweetId,data){
-    try{
-        const tweet=await Tweet.findByIdAndUpdate(tweetId,data,{new:true});
-        return tweet;
-       }
-       catch(error){
-           console.log(error);
-       }
+// async update(tweetId,data){
+//     try{
+//         const tweet=await Tweet.findByIdAndUpdate(tweetId,data,{new:true});
+//         return tweet;
+//        }
+//        catch(error){
+//            console.log(error);
+//        }
 
-}
+// }
 
 async destroy(id){
 
