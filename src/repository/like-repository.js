@@ -7,7 +7,7 @@ class LikeRepository extends CrudRepository{
         super(Like);
     }
 
-    async findByUserLikeable(data){
+    async findByUserAndLikeable(data){
         try{
 const like=await Like.findOne(data);
 return like;
